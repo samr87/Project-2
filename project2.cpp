@@ -70,7 +70,7 @@ int main() {
         cout << "\nProcess Number: " << processNum << "  Process Size: " << n;
         // Prints the process number and the amount of memory assigned to it.
 
-  }
+  } // End of for-loop.
 
     cout << "\nTotal Amount: " << memSum;
 
