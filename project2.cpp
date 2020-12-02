@@ -38,7 +38,6 @@ int main() {
     // This for-loop allocates blocks of memory to the 40 processes.
         
         /*long long servTime = serv(seed);
-        processNum += 1;
         long memSize = mem(seed);
         memSum = memSum + memSize;
         cout << processNum << "\t" << servTime << "\t" << memSize << "\n";*/
