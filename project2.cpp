@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <iostream>
 #include <random>
@@ -62,30 +63,34 @@ int main() {
             
             processNum == 0;
             
-            for(int i = 0; i < 10000; i++) {
+            for(int i = 0; i < 40; i++) {
                 //in the block of 10000 mem locations malloc handles where the processes go
-                p[i] = (int*)malloc(sizeof(int));
+
+		p[i] = (int*)malloc(sizeof(int));
                 int mem = memReq(seed);
                 processesMemory[i] = processesMemory[i] + mem;
                 totalMemUsed = totalMemUsed + mem;
+
             }
             processNum++;
             
-            for(int i = 0; i < 10000; i++) {
+
+            for(int i = 0; i < 40; i++) {
                 free(p[i]);
             }
             auto end = chrono::steady_clock::now();
             
             for(int i = 0; i < 40; i++) {
                 long long servTime = serv(seed);
-                int process = processMemory[i];
-                cout << "Process ID: " << i+1 << "\tService Time: " << servTime << "\tMemory Requirement: " << process;
+                int process = processesMemory[i];
+                cout << "\nProcess ID: " << i+1 << "\tService Time: " << servTime << "\tMemory Requirement: " << process;
             }
-            cout << "\nTime elapsed (nanoseconds): " << chrono::duration_cast<chrono::nanoseconds>(end-start).count();
+            cout << "\nTime elapsed (nanoseconds): \n" << chrono::duration_cast<chrono::nanoseconds>(end-start).count();
             
             scenario1 = false;
         }
         running = false;
     }
 }
+    
     
