@@ -53,7 +53,25 @@ int main() {
     //while boolean is true run all of the scenarios, otherwise program will end
     while(running != false) {
         bool scenario1 = true;
-        //run scenario 
+        //run scenario until false
+        while(scenario1 ! = false) {
+            auto start = chrono::steady_clock::now();
+            
+            for(int i = 0; i < 40; i++) {
+                processesMemory[i] = 1;
+            }
+            
+            processesNum == 0;
+            
+            for(int i = 0; i < 10000; i++) {
+                //in the block of 10000 mem locations malloc handles where the processes go
+                p[i] = (int*)malloc(sizeof(int));
+                int mem = memReq(seed);
+                processesMemory[i] = processesMemory[i] + mem;
+                totalMemUsed = totalMemUsed + mem;
+            }
+            processNum++;
+        }
     }
 }
     
