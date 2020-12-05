@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <iostream>
 #include <random>
-#include "processor.h"
 #include <chrono>
 
 using namespace std;
@@ -48,6 +47,14 @@ int main() {
         cout << "Process Number\t" << i+1 << "\tProcess Size\t" << process << "\tService Time\t" << serTime << "\n";
     }
     cout "\n" << totalMemUsed << "\n";
+    
+    bool running = true;
+    
+    //while boolean is true run all of the scenarios, otherwise program will end
+    while(running != false) {
+        bool scenario1 = true;
+        //run scenario 
+    }
 }
     
     
