@@ -108,6 +108,7 @@ int main() {
 			processesMemory[i] = processesMemory[i] + mem;
 			my_malloc(processesMemory, blockSize, processNum);
 		}
+		scenario2 = false;
 	}    
         running = false;
     }
