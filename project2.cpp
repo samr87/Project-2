@@ -3,6 +3,8 @@
 #include <iostream>
 #include <random>
 #include <chrono>
+#include "my_malloc"
+#include "my_free"
 
 using namespace std;
 
