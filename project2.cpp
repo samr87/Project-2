@@ -3,8 +3,8 @@
 #include <iostream>
 #include <random>
 #include <chrono>
-#include "my_malloc"
-#include "my_free"
+#include "my_malloc.h"
+#include "my_free.h"
 
 using namespace std;
 
