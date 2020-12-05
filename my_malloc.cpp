@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void my_malloc(int processesMemory[], int blockSize[], int processNum) {
+void my_malloc(int processesMemory[], long long blockSize[], int processNum) {
   int orderOfProcesses[processNum];
   
   for(int i = 0; i < 40; i++) {
