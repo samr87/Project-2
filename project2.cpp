@@ -93,7 +93,7 @@ int main() {
         }
 	    
 	bool scenario2 = true;
-	int blockSize[40];    
+	long long blockSize[40];    
 	while(scenario2 != false) {
 		auto start = chrono::steady_clock::now();
 		
@@ -108,6 +108,8 @@ int main() {
 			processesMemory[i] = processesMemory[i] + mem;
 			my_malloc(processesMemory, blockSize, processNum);
 		}
+		auto end = chrono::steady_clock::now();
+		cout<< "Time elpased (nanoseconds): " << chrono::duration_cast<chrono::nanoseconds>(end-start).count() << "\n";
 		scenario2 = false;
 	}    
         running = false;
