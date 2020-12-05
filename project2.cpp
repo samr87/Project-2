@@ -71,6 +71,18 @@ int main() {
             }
             processNum++;
             
+            for(int i = 0; i < 10000; i++) {
+                free(p[i]);
+            }
+            auto end = chrono::steady_clock::now();
+            
+            for(int i = 0; i < 40; i++) {
+                long long servTime = serv(seed);
+                int process = processMemory[i];
+                cout << "Process ID: " << i+1 << "\tService Time: " << servTime << "\tMemory Requirement: " << process;
+            }
+            cout << "\nTime elapsed (nanoseconds): " << chrono::duration_cast<chrono::nanoseconds>(end-start).count();
+            
             scenario1 = false;
         }
         running = false;
