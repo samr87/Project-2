@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     long long seedValue;
     cout << "Enter a seed value: ";
-    cin >> seedValue'
+    cin >> seedValue;
         
     mt19937_64 seed(seedValue);
     
@@ -28,12 +28,11 @@ int main() {
         int mem = memReq(seed);
         processesMemory[processNum] = processesMemory[processNum] + mem;
         totalMemUsed = totalMemUsed + mem;
-
         //if the totall memory over 10000 end the loop and subtract from the last process given memory        
         if(totalMemUsed > 10000) {
             break;
         }
-        processNum++:
+        processNum++;
     }
     
     while(totalMemUsed > 10000) {
@@ -44,9 +43,9 @@ int main() {
     for(int i = 0; i < 40; i++) {
         long long servTime = serv(seed);
         int process = processesMemory[i];
-        cout << "Process Number\t" << i+1 << "\tProcess Size\t" << process << "\tService Time\t" << serTime << "\n";
+        cout << "Process Number\t" << i+1 << "\tProcess Size\t" << process << "\tService Time\t" << servTime << "\n";
     }
-    cout "\n" << totalMemUsed << "\n";
+    cout <<  "\n" << totalMemUsed << "\n";
     
     bool running = true;
     
@@ -54,14 +53,14 @@ int main() {
     while(running != false) {
         bool scenario1 = true;
         //run scenario until false
-        while(scenario1 ! = false) {
+        while(scenario1 != false) {
             auto start = chrono::steady_clock::now();
             
             for(int i = 0; i < 40; i++) {
                 processesMemory[i] = 1;
             }
             
-            processesNum == 0;
+            processNum == 0;
             
             for(int i = 0; i < 10000; i++) {
                 //in the block of 10000 mem locations malloc handles where the processes go
@@ -78,6 +77,3 @@ int main() {
     }
 }
     
-    
-    
-
