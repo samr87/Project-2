@@ -71,7 +71,10 @@ int main() {
                 totalMemUsed = totalMemUsed + mem;
             }
             processNum++;
+            
+            scenario1 = false;
         }
+        running = false;
     }
 }
     
