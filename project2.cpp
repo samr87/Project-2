@@ -91,6 +91,24 @@ int main() {
             
             scenario1 = false;
         }
+	    
+	bool scenario2 = true;
+	int blockSize[40];    
+	while(scenario2 != false) {
+		auto start = chrono::steady_clock::now();
+		
+		for(int i = 0; i < 40; i++) {
+			processesMemory[i] = 1;
+		}
+		
+		processNum = 40;
+		
+		for(int i = 0; i < 40; i++) {
+			int mem = memReq(seed);
+			processesMemory[i] = processesMemory[i] + mem;
+			my_malloc(processesMemory, blockSize, processNum);
+		}
+	}    
         running = false;
     }
 }
