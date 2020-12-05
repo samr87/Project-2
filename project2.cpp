@@ -93,7 +93,7 @@ int main() {
         }
 	    
 	bool scenario2 = true;
-	long long blockSize[40];    
+	long long blockSize{10000];    
 	while(scenario2 != false) {
 		auto start = chrono::steady_clock::now();
 		
